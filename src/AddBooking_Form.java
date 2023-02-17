@@ -1,7 +1,7 @@
 import javax.swing.*;
 
 
-public class BookingConfirmation {
+public class AddBooking_Form {
     private JPanel panelMain;
     private JLabel lbl_RoomNo;
     private JLabel lbl_BookingDate;
