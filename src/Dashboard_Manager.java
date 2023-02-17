@@ -13,4 +13,5 @@ public class Dashboard_Manager {
     private JButton btn_ViewBooking;
     private JPanel panelBackground;
     private JLabel lbl_BackgroundImage;
+    private JLabel lbl_DashboardManager;
 }
