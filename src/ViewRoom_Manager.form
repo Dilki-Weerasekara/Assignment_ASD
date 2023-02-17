@@ -33,7 +33,9 @@
             <preferred-size width="150" height="50"/>
           </grid>
         </constraints>
-        <properties/>
+        <properties>
+          <font name="Corbel Light" size="18" style="1"/>
+        </properties>
       </component>
       <component id="eabe" class="javax.swing.JTextField" binding="txt_Search">
         <constraints>
