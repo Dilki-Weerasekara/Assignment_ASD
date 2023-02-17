@@ -5,7 +5,7 @@ public class Registration_Form {
     private JLabel lbl_UserReg;
     private JLabel lbl_FullName;
     private JLabel lbl_Position;
-    private JLabel lbl_UserName;
+    private JLabel lbl_Email;
     private JLabel lbl_Password;
     private JLabel lbl_ConfPw;
     private JButton btn_Register;

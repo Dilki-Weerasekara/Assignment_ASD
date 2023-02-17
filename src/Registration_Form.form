@@ -1,18 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <form xmlns="http://www.intellij.com/uidesigner/form/" version="1" bind-to-class="Registration_Form">
-  <grid id="27dc6" binding="panelMain" layout-manager="GridLayoutManager" row-count="7" column-count="3" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
-    <margin top="0" left="0" bottom="0" right="0"/>
+  <grid id="27dc6" binding="panelMain" layout-manager="GridLayoutManager" row-count="7" column-count="9" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+    <margin top="25" left="25" bottom="25" right="25"/>
     <constraints>
-      <xy x="20" y="20" width="500" height="400"/>
+      <xy x="20" y="20" width="620" height="457"/>
     </constraints>
-    <properties/>
+    <properties>
+      <background color="-6619171"/>
+      <font name="SansSerif" size="18" style="1"/>
+      <maximumSize width="0" height="0"/>
+      <minimumSize width="0" height="0"/>
+      <preferredSize width="600" height="400"/>
+    </properties>
     <border type="none"/>
     <children>
       <component id="d3d8e" class="javax.swing.JLabel" binding="lbl_UserReg">
         <constraints>
-          <grid row="0" column="0" row-span="1" col-span="3" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+          <grid row="0" column="0" row-span="1" col-span="9" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
         </constraints>
         <properties>
+          <font name="JetBrains Mono ExtraBold" size="36" style="1"/>
           <text value="User Registration"/>
         </properties>
       </component>
@@ -21,6 +28,7 @@
           <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
         </constraints>
         <properties>
+          <font name="SansSerif" size="18" style="1"/>
           <text value="Full Name"/>
         </properties>
       </component>
@@ -29,15 +37,17 @@
           <grid row="2" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
         </constraints>
         <properties>
+          <font name="SansSerif" size="18" style="1"/>
           <text value="Position"/>
         </properties>
       </component>
-      <component id="a2427" class="javax.swing.JLabel" binding="lbl_UserName">
+      <component id="a2427" class="javax.swing.JLabel" binding="lbl_Email">
         <constraints>
           <grid row="3" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
         </constraints>
         <properties>
-          <text value="User Name"/>
+          <font name="SansSerif" size="18" style="1"/>
+          <text value="Email"/>
         </properties>
       </component>
       <component id="25fa6" class="javax.swing.JLabel" binding="lbl_Password">
@@ -45,6 +55,7 @@
           <grid row="4" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
         </constraints>
         <properties>
+          <font name="SansSerif" size="18" style="1"/>
           <text value="Password"/>
         </properties>
       </component>
@@ -53,76 +64,93 @@
           <grid row="5" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
         </constraints>
         <properties>
+          <font name="SansSerif" size="18" style="1"/>
           <text value="Confirm Password"/>
         </properties>
       </component>
       <component id="13d23" class="javax.swing.JButton" binding="btn_Register">
         <constraints>
-          <grid row="6" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+          <grid row="6" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
         </constraints>
         <properties>
+          <background color="-14678017"/>
+          <font name="SansSerif" size="20" style="1"/>
+          <foreground color="-1"/>
           <text value="Register"/>
         </properties>
       </component>
       <component id="94992" class="javax.swing.JButton" binding="btn_Cansel">
         <constraints>
-          <grid row="6" column="1" row-span="1" col-span="2" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+          <grid row="6" column="2" row-span="1" col-span="5" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
         </constraints>
         <properties>
+          <background color="-62172"/>
+          <font name="SansSerif" size="20" style="1"/>
+          <foreground color="-1"/>
           <text value="Cancel"/>
         </properties>
       </component>
-      <component id="b4a3c" class="javax.swing.JTextField" binding="textField1" default-binding="true">
+      <component id="43612" class="javax.swing.JPasswordField" binding="txt_ConfPw">
         <constraints>
-          <grid row="1" column="1" row-span="1" col-span="2" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
+          <grid row="5" column="1" row-span="1" col-span="6" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
             <preferred-size width="150" height="-1"/>
           </grid>
         </constraints>
         <properties>
+          <font name="Calibri Light" size="18" style="1"/>
+        </properties>
+      </component>
+      <component id="bb759" class="javax.swing.JPasswordField" binding="txt_Password">
+        <constraints>
+          <grid row="4" column="1" row-span="1" col-span="6" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
+            <preferred-size width="150" height="-1"/>
+          </grid>
+        </constraints>
+        <properties>
+          <font name="Calibri Light" size="18" style="1"/>
+        </properties>
+      </component>
+      <component id="6dc76" class="javax.swing.JTextField" binding="txt_UserName">
+        <constraints>
+          <grid row="3" column="1" row-span="1" col-span="6" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
+            <preferred-size width="150" height="-1"/>
+          </grid>
+        </constraints>
+        <properties>
+          <font name="Calibri Light" size="18" style="1"/>
           <text value=""/>
         </properties>
       </component>
       <component id="872aa" class="javax.swing.JRadioButton" binding="btn_radioManager">
         <constraints>
-          <grid row="2" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+          <grid row="2" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="8" fill="0" indent="0" use-parent-layout="false">
+            <preferred-size width="138" height="29"/>
+          </grid>
         </constraints>
         <properties>
+          <font name="SansSerif" size="18" style="1"/>
           <text value="Manager"/>
+        </properties>
+      </component>
+      <component id="b4a3c" class="javax.swing.JTextField" binding="textField1" default-binding="true">
+        <constraints>
+          <grid row="1" column="1" row-span="1" col-span="6" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
+            <preferred-size width="150" height="-1"/>
+          </grid>
+        </constraints>
+        <properties>
+          <font name="Calibri Light" size="18" style="1"/>
+          <text value=""/>
         </properties>
       </component>
       <component id="d6735" class="javax.swing.JRadioButton" binding="btn_radioClerk">
         <constraints>
-          <grid row="2" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+          <grid row="2" column="6" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
         </constraints>
         <properties>
+          <font name="SansSerif" size="18" style="1"/>
           <text value="Clerk"/>
         </properties>
-      </component>
-      <component id="6dc76" class="javax.swing.JTextField" binding="txt_UserName">
-        <constraints>
-          <grid row="3" column="1" row-span="1" col-span="2" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
-            <preferred-size width="150" height="-1"/>
-          </grid>
-        </constraints>
-        <properties>
-          <text value=""/>
-        </properties>
-      </component>
-      <component id="bb759" class="javax.swing.JPasswordField" binding="txt_Password">
-        <constraints>
-          <grid row="4" column="1" row-span="1" col-span="2" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
-            <preferred-size width="150" height="-1"/>
-          </grid>
-        </constraints>
-        <properties/>
-      </component>
-      <component id="43612" class="javax.swing.JPasswordField" binding="txt_ConfPw">
-        <constraints>
-          <grid row="5" column="1" row-span="1" col-span="2" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
-            <preferred-size width="150" height="-1"/>
-          </grid>
-        </constraints>
-        <properties/>
       </component>
     </children>
   </grid>
