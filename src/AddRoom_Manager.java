@@ -1,6 +1,6 @@
 import javax.swing.*;
 
-public class AddRoom_Form {
+public class AddRoom_Manager {
     private JPanel panelMain;
     private JLabel lbl_AddRoom;
     private JLabel lbl_RoomNo;
