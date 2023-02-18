@@ -42,16 +42,27 @@
           <text value=""/>
         </properties>
       </component>
-      <component id="25ea9" class="javax.swing.JTable" binding="tb_ViewBookingDetails">
+      <scrollpane id="2b137">
         <constraints>
-          <grid row="2" column="0" row-span="1" col-span="2" vsize-policy="6" hsize-policy="6" anchor="0" fill="3" indent="0" use-parent-layout="false">
-            <preferred-size width="150" height="50"/>
-          </grid>
+          <grid row="2" column="0" row-span="1" col-span="2" vsize-policy="7" hsize-policy="7" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
         </constraints>
-        <properties>
-          <font name="Calibri Light" size="18" style="1"/>
-        </properties>
-      </component>
+        <properties/>
+        <border type="none" title="Booking Details" title-justification="2"/>
+        <children>
+          <component id="25ea9" class="javax.swing.JTable" binding="tb_ViewBookingDetails">
+            <constraints/>
+            <properties>
+              <autoCreateColumnsFromModel value="false"/>
+              <autoCreateRowSorter value="false"/>
+              <autoResizeMode value="2"/>
+              <cellSelectionEnabled value="false"/>
+              <columnSelectionAllowed value="true"/>
+              <font name="Calibri Light" size="18" style="1"/>
+              <updateSelectionOnSort value="true"/>
+            </properties>
+          </component>
+        </children>
+      </scrollpane>
     </children>
   </grid>
 </form>

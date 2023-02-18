@@ -5,6 +5,8 @@ import javax.swing.*;
 public class Login_Form {
 
     private JLabel lbl_Login;
+
+        private JPanel panelMain;
         private JLabel lbl_Email;
         private JLabel lbl_Password;
         private JButton btn_cansel;
