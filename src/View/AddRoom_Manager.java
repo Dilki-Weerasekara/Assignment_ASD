@@ -15,4 +15,8 @@ public class AddRoom_Manager {
     private JRadioButton btn_radioComputLab;
     private JRadioButton btn_radioTutorial;
     private JRadioButton btn_radioLecture_Theatre;
+    private JLabel lbl_CurrentStatus;
+    private JComboBox comboBox_status;
+    private JLabel lbl_Reason;
+    private JTextField txt_Reason;
 }
