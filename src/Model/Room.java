@@ -9,8 +9,8 @@ public class Room {
     int Size;
     String Status;
     String Reason;
-    java.util.Date FromDate;
-    java.util.Date ToDate;
+    Date FromDate;
+    Date ToDate;
     Clock StartTime;
     Clock EndTime;
 
