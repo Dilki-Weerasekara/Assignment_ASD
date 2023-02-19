@@ -1,8 +1,9 @@
 package Controller;
 import Model.Room;
 import java.sql.Connection;
+import java.util.List;
 
-public class Room_Controller {
+public class Room_Controller implements Room_Interface{
     Connection con;
 
     //get database connection
@@ -11,4 +12,28 @@ public class Room_Controller {
     }
 
 
+    @Override
+    public void save(Room room) {
+
+    }
+
+    @Override
+    public void update(Room room) {
+
+    }
+
+    @Override
+    public void delete(Room room) {
+
+    }
+
+    @Override
+    public List<Room> list() {
+        return null;
+    }
+
+    @Override
+    public Room get(int roomNo) {
+        return null;
+    }
 }
