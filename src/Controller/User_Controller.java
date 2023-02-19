@@ -41,6 +41,23 @@ public class User_Controller implements User_Interface {
     @Override
     public void update(User user) {
 
+        try{
+            //update query
+            String query = "UPDATE user SET Password ='"+user.getPassword()+"' WHERE User_id = '"+user.getUser_id()+"'";
+
+            //set query
+            Statement statement = con.createStatement();
+
+            //execute query
+            statement.execute(query);
+
+            //Show message dialog
+            JOptionPane.showMessageDialog(null,"Successfully Updated","information",JOptionPane.INFORMATION_MESSAGE);
+
+        }catch (Exception e){
+            e.printStackTrace();
+        }
+
     }
 
     @Override
