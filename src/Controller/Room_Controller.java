@@ -11,7 +11,6 @@ public class Room_Controller implements Room_Interface{
         this.con = Database.Db_Connection.getDb_Connection();
     }
 
-
     @Override
     public void save(Room room) {
 
@@ -33,7 +32,7 @@ public class Room_Controller implements Room_Interface{
     }
 
     @Override
-    public Room get(int roomNo) {
+    public Room get(String RoomNo) {
         return null;
     }
 }
