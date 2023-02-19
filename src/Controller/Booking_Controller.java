@@ -68,6 +68,22 @@ public class Booking_Controller implements Booking_Interface {
     @Override
     public void delete(Booking booking) {
 
+        try{
+            //delete query
+            String query = "DELETE FROM booking WHERE Booking_id='"+booking.getBooking_id()+"'";
+
+            //set query
+            Statement statement = con.createStatement();
+
+            //execute query
+            statement.execute(query);
+
+            //Show message dialog
+            JOptionPane.showMessageDialog(null,"Successfully Deleted","information",JOptionPane.INFORMATION_MESSAGE);
+
+        }catch(Exception e){
+            e.printStackTrace();
+        }
     }
 
     @Override
