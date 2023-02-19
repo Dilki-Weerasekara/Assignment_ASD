@@ -5,7 +5,7 @@ import javax.swing.*;
 import java.sql.Connection;
 import java.util.List;
 import java.sql.Statement;
-import java.sql.SQLException;
+
 
 public class Room_Controller implements Room_Interface{
     Connection con;
