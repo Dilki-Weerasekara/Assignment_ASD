@@ -59,19 +59,4 @@ public class User_Controller implements User_Interface {
         }
 
     }
-
-    @Override
-    public void delete(User user) {
-
-    }
-
-    @Override
-    public List<User> list() {
-        return null;
-    }
-
-    @Override
-    public User get(int User_id) {
-        return null;
-    }
 }
