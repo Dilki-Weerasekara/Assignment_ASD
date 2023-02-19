@@ -2,7 +2,9 @@ package Controller;
 
 import Model.Booking;
 
+import javax.swing.*;
 import java.sql.Connection;
+import java.sql.Statement;
 import java.util.List;
 
 public class Booking_Controller implements Booking_Interface {
@@ -16,6 +18,25 @@ public class Booking_Controller implements Booking_Interface {
 
     @Override
     public void save(Booking booking) {
+
+        try{
+            //insert query
+            String query = "INSERT INTO booking (Booking_id, FromDate, ToDate, StartTime, EndTime, " +
+                    "Occasion, Period, Client, ContactNo, Notes, RoomNo) " +
+                    "VALUES ('"+booking.getBooking_id()+"','"+booking.getFromDate()+"','"+booking.getToDate()+"','"+booking.getStartTime()+"','"+booking.getEndTime()+"','"+booking.getOccasion()+"'," +
+                    "'"+booking.getPeriod()+"','"+booking.getClient()+"','"+booking.getContactNo()+"','"+booking.getNotes()+"','"+booking.getRoomNo()+"')";
+
+            //set query
+            Statement statement = con.createStatement();
+            //execute query
+            statement.execute(query);
+
+            //Show message dialog
+            JOptionPane.showMessageDialog(null,"Successfully Saved","information",JOptionPane.INFORMATION_MESSAGE);
+
+        }catch (Exception e){
+            e.printStackTrace();
+        }
 
     }
 
