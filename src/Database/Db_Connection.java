@@ -11,7 +11,7 @@ public class Db_Connection {
         return db;
     }
 
-    //check the 
+    //check the Database connection
     public static void main(String[] args) {
         try {
             Connection con = Db_Connection.getDb_Connection();
