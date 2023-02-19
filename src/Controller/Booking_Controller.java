@@ -1,6 +1,7 @@
 package Controller;
 
 import Model.Booking;
+import com.sun.source.tree.TryTree;
 
 import javax.swing.*;
 import java.sql.Connection;
@@ -42,6 +43,25 @@ public class Booking_Controller implements Booking_Interface {
 
     @Override
     public void update(Booking booking) {
+        try{
+
+            //update query
+            String query = "UPDATE booking SET Booking_id='"+booking.getBooking_id()+"',FromDate='"+booking.getFromDate()+"',ToDate='"+booking.getToDate()+"',StartTime='"+booking.getStartTime()+"'," +
+                    "EndTime='"+booking.getEndTime()+"',Occasion='"+booking.getOccasion()+"',Period='"+booking.getPeriod()+"',Client='"+booking.getClient()+"',ContactNo='"+booking.getContactNo()+"'," +
+                    "Notes='"+booking.getNotes()+"',RoomNo='"+booking.getRoomNo()+"' WHERE Booking_id='"+booking.getBooking_id()+"'";
+
+            //set query
+            Statement statement = con.createStatement();
+
+            //execute query
+            statement.execute(query);
+
+            //Show message dialog
+            JOptionPane.showMessageDialog(null,"Successfully Updated","information",JOptionPane.INFORMATION_MESSAGE);
+
+        }catch (Exception e){
+            e.printStackTrace();
+        }
 
     }
 
