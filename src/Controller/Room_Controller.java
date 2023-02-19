@@ -66,6 +66,23 @@ public class Room_Controller implements Room_Interface{
     @Override
     public void delete(Room room) {
 
+        try{
+            //delete query
+            String query = "DELETE FROM `room` WHERE RoomNo = '"+room.getRoomNo()+"'";
+
+            //set query
+            Statement statement = con.createStatement();
+
+            //execute query
+            statement.execute(query);
+
+            //Show message dialog
+            JOptionPane.showMessageDialog(null,"Successfully Deleted","information",JOptionPane.INFORMATION_MESSAGE);
+
+        }catch (Exception e){
+            e.printStackTrace();
+        }
+
     }
 
     @Override
