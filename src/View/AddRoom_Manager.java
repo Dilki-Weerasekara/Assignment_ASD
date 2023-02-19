@@ -19,4 +19,16 @@ public class AddRoom_Manager {
     private JComboBox comboBox_status;
     private JLabel lbl_Reason;
     private JTextField txt_Reason;
+    private JLabel lbl_Date;
+    private JLabel lbl_From;
+    private JTextField textField1;
+    private JLabel lbl_To;
+    private JTextField textField2;
+    private JLabel lbl_TimePeriod;
+    private JTextField txt_Start;
+    private JTextField txt_End;
+    private JLabel lbl_End;
+    private JLabel lbl_Start;
+
+
 }
