@@ -2,7 +2,9 @@ package Controller;
 
 import Model.User;
 
+import javax.swing.*;
 import java.sql.Connection;
+import java.sql.Statement;
 import java.util.List;
 
 public class User_Controller implements User_Interface {
@@ -16,6 +18,23 @@ public class User_Controller implements User_Interface {
 
     @Override
     public void save(User user) {
+
+        try{
+            //insert query
+            String query = "INSERT INTO user(User_id, Name, Position, Email, Password) " +
+                    "VALUES ('"+user.getUser_id()+"','"+user.getName()+"','"+user.getPosition()+"','"+user.getEmail()+"','"+user.getPassword()+"')";
+
+            //set query
+            Statement statement = con.createStatement();
+            //execute query
+            statement.execute(query);
+
+            //Show message dialog
+            JOptionPane.showMessageDialog(null,"Successfully Saved","information",JOptionPane.INFORMATION_MESSAGE);
+
+        }catch (Exception e){
+            e.printStackTrace();
+        }
 
     }
 
