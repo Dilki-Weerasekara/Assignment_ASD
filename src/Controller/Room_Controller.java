@@ -45,9 +45,9 @@ public class Room_Controller implements Room_Interface{
 
         try{
             //update query
-            String query = "UPDATE `room` SET `RoomNo`='"+room.getRoomNo()+"',`Type`='"+room.getType()+"',`Size`='"+room.getSize()+"',`Status`='"+room.getStatus()+"'," +
-                    "`Reason`='"+room.getReason()+"',`FromDate`='"+room.getFromDate()+"',`ToDate`='"+room.getToDate()+"',`StartTime`='"+room.getStartTime()+"'," +
-                    "`EndTime`='"+room.getEndTime()+"' WHERE RoomNo = '"+room.getRoomNo()+"'";
+            String query = "UPDATE room SET RoomNo='"+room.getRoomNo()+"',Type='"+room.getType()+"',Size='"+room.getSize()+"',Status='"+room.getStatus()+"'," +
+                    "Reason='"+room.getReason()+"',FromDate='"+room.getFromDate()+"',ToDate='"+room.getToDate()+"',StartTime='"+room.getStartTime()+"'," +
+                    "EndTime='"+room.getEndTime()+"' WHERE RoomNo = '"+room.getRoomNo()+"'";
 
             //set query
             Statement statement = con.createStatement();
