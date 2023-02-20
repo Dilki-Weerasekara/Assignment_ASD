@@ -1,6 +1,7 @@
 package Model;
+import java.sql.Time;
 import java.util.Date;
-import java.time.Clock;
+
 
 public class Room {
     //define the variables
@@ -11,11 +12,13 @@ public class Room {
     String Reason;
     Date FromDate;
     Date ToDate;
-    Clock StartTime;
-    Clock EndTime;
+    Time StartTime;
+    Time EndTime;
+
+
 
     //Main constructor
-    public Room(String roomNo, String type, int size, String status, String reason, Date fromDate, Date toDate, Clock startTime, Clock endTime) {
+    public Room(String roomNo, String type, int size, String status, String reason, Date fromDate, Date toDate, Time startTime, Time endTime) {
         RoomNo = roomNo;
         Type = type;
         Size = size;
@@ -84,19 +87,19 @@ public class Room {
         ToDate = toDate;
     }
 
-    public Clock getStartTime() {
+    public Time getStartTime() {
         return StartTime;
     }
 
-    public void setStartTime(Clock startTime) {
+    public void setStartTime(Time startTime) {
         StartTime = startTime;
     }
 
-    public Clock getEndTime() {
+    public Time getEndTime() {
         return EndTime;
     }
 
-    public void setEndTime(Clock endTime) {
+    public void setEndTime(Time endTime) {
         EndTime = endTime;
     }
 }
