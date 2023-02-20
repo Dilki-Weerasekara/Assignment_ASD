@@ -4,12 +4,10 @@ import Model.Booking;
 import com.sun.source.tree.TryTree;
 import com.sun.source.tree.WhileLoopTree;
 
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
+import java.awt.print.Book;
+import java.sql.*;
 import java.util.ArrayList;
 import javax.swing.*;
-import java.sql.Connection;
-import java.sql.Statement;
 import java.util.List;
 
 public class Booking_Controller implements Booking_Interface {
@@ -126,8 +124,53 @@ public class Booking_Controller implements Booking_Interface {
         return viewList;
     }
 
+    // search using ID
     @Override
     public Booking get(int Booking_id) {
-        return null;
+
+        Booking booking = null;
+        try {
+            //search data using ID
+            String query = "SELECT * FROM booking WHERE Booking_id = " + Booking_id + "";
+
+            //set the query
+            PreparedStatement preparedStatement = con.prepareStatement(query);
+
+            //execute query
+            ResultSet resultSet = preparedStatement.executeQuery();
+
+            try{
+                    if(resultSet.isBeforeFirst()){
+                            try{
+                                    while (resultSet.next()){
+                                            int booking_id = resultSet.getInt("Booking_id");
+                                            Date FromDate = resultSet.getDate("FromDate");
+                                            Date ToDate = resultSet.getDate("ToDate");
+                                            Time StartTime = resultSet.getTime("StartTime");
+                                            Time EndTime = resultSet.getTime("EndTime");
+                                            String Occasion = resultSet.getString("Occasion");
+                                            String Period = resultSet.getString("Period");
+                                            String 	Client = resultSet.getString("Client");
+                                            Integer ContactNo = resultSet.getInt("ContactNo");
+                                            String Notes = resultSet.getString("Notes");
+                                            String RoomNo = resultSet.getString("RoomNo");
+
+                                            booking = new Booking(booking_id,FromDate,ToDate,StartTime,EndTime,Occasion,Period,Client,ContactNo,Notes,RoomNo);
+                                    }
+                            }catch (SQLException sqlException){
+
+                            }
+                    }else{
+                        JOptionPane.showMessageDialog(null, "Sorry,No Data Matched", "Information", JOptionPane.INFORMATION_MESSAGE);
+                    }
+            }catch(SQLException sqlException){
+
+            }
+
+        } catch(Exception e){
+           e.printStackTrace();
+        }
+
+        return booking;
     }
 }
