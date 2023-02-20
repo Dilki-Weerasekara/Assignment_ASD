@@ -2,6 +2,7 @@ package Controller;
 
 import Model.Room;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public interface Room_Interface {
@@ -18,7 +19,7 @@ public interface Room_Interface {
     public void delete(Room room);
 
     //view all details
-    public List<Room> list();
+    public ArrayList<Room> list();
 
     //search specific data
     public Room get(String RoomNo);
