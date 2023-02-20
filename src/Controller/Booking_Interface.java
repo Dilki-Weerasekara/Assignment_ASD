@@ -1,5 +1,6 @@
 package Controller;
 import Model.Booking;
+import java.util.ArrayList;
 
 import java.awt.print.Book;
 import java.util.List;
@@ -18,7 +19,7 @@ public interface Booking_Interface {
     public void delete(Booking booking);
 
     //view all details
-    public List<Booking> list();
+    public ArrayList<Booking> list();
 
     //search specific data
     public Booking get(int Booking_id);
