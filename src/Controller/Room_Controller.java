@@ -3,12 +3,9 @@ package Controller;
 import Model.Room;
 
 import javax.swing.*;
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
+import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
-import java.sql.Statement;
 
 
 public class Room_Controller implements Room_Interface {
@@ -124,12 +121,61 @@ public class Room_Controller implements Room_Interface {
 
         }
 
-
-        return null;
+        return viewList;
     }
 
+    //search data using Room No
     @Override
     public Room get(String RoomNo) {
-        return null;
+
+        //create object
+        Room room = null;
+
+        try {
+            //search query via room no
+            String query = "SELECT * FROM room WHERE RoomNo = " + RoomNo + " ";
+
+            //set query
+            PreparedStatement preparedStatement = con.prepareStatement(query);
+
+            //execute query
+            ResultSet resultSet = preparedStatement.executeQuery();
+
+            try {
+                    if (resultSet.isBeforeFirst()) {
+                            try{
+                                    while (resultSet.next()){
+                                        String roomNo = resultSet.getString("RoomNo");
+                                        String 	Type = resultSet.getString("Type");
+                                        Integer Size = resultSet.getInt("Size");
+                                        String Status = resultSet.getString("Status");
+                                        String Reason = resultSet.getString("Reason");
+                                        Date FromDate = resultSet.getDate("FromDate");
+                                        Date ToDate = resultSet.getDate("ToDate");
+                                        Time StartTime = resultSet.getTime("StartTime");
+                                        Time EndTime = resultSet.getTime("EndTime");
+
+                                        //pass values to model class constructor
+                                        room = new Room(roomNo,Type,Size,Status,Reason,FromDate,ToDate,StartTime,EndTime);
+
+                                    }
+
+                            }catch (SQLException sqlException){
+
+                            }
+                    }
+                    else {
+
+                    }
+
+            } catch (SQLException sqlException) {
+
+            }
+
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
+        return room;
     }
 }
