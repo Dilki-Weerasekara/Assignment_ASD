@@ -123,7 +123,7 @@ public class Booking_Controller implements Booking_Interface {
             e.printStackTrace();
         }
 
-        return null;
+        return viewList;
     }
 
     @Override
