@@ -23,15 +23,6 @@
           <text value="User Registration"/>
         </properties>
       </component>
-      <component id="50684" class="javax.swing.JLabel" binding="lbl_FullName">
-        <constraints>
-          <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
-        </constraints>
-        <properties>
-          <font name="SansSerif" size="18" style="1"/>
-          <text value="Full Name"/>
-        </properties>
-      </component>
       <component id="4a75d" class="javax.swing.JLabel" binding="lbl_Position">
         <constraints>
           <grid row="2" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
@@ -154,6 +145,15 @@
           <background color="-6619171"/>
           <font name="SansSerif" size="18" style="1"/>
           <text value="Clerk"/>
+        </properties>
+      </component>
+      <component id="50684" class="javax.swing.JLabel" binding="lbl_FullName">
+        <constraints>
+          <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <font name="SansSerif" size="18" style="1"/>
+          <text value="Full Name"/>
         </properties>
       </component>
     </children>
