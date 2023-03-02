@@ -1,8 +1,11 @@
 package View;
 
 import javax.swing.*;
+import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
-public class AddRoom_Manager {
+public class AddRoom_Manager extends JFrame{
     private JPanel panelMain;
     private JLabel lbl_AddRoom;
     private JLabel lbl_RoomNo;
@@ -30,5 +33,23 @@ public class AddRoom_Manager {
     private JLabel lbl_End;
     private JLabel lbl_Start;
 
+    public AddRoom_Manager(){
+        super();
+        setTitle("Add Room Form");
+        setContentPane(panelMain);
+        setMinimumSize(new Dimension(900,500));
+        setResizable(false);
+        setVisible(true);
+        btn_Cancel.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                dispose();
+            }
+        });
+    }
+
+    public static void main(String[] args) {
+        AddRoom_Manager addRoomManager = new AddRoom_Manager();
+    }
 
 }
