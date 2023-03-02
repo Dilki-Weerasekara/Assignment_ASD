@@ -16,7 +16,7 @@ public class Dashboard_Clerk extends JFrame{
     //constructor
     public Dashboard_Clerk(){
         super();
-        setTitle("Add Room Form");
+        setTitle("Dashboard of Clerk");
         setContentPane(panelMain);
         setMinimumSize(new Dimension(2000,800));
         setResizable(false);
