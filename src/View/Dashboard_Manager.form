@@ -10,7 +10,7 @@
       <foreground color="-11108097"/>
       <maximumSize width="0" height="0"/>
       <minimumSize width="0" height="0"/>
-      <preferredSize width="1000" height="750"/>
+      <preferredSize width="2000" height="800"/>
     </properties>
     <border type="none"/>
     <children>

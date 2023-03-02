@@ -1,8 +1,9 @@
 package View;
 
 import javax.swing.*;
+import java.awt.*;
 
-public class Dashboard_Manager {
+public class Dashboard_Manager extends JFrame{
     private JPanel panelMain;
     private JPanel panelButtons;
     private JButton btn_AddRoom;
@@ -16,4 +17,19 @@ public class Dashboard_Manager {
     private JPanel panelBackground;
     private JLabel lbl_BackgroundImage;
     private JLabel lbl_DashboardManager;
+
+    //constructor
+    public Dashboard_Manager(){
+        super();
+        setTitle("Dashboard of Manager");
+        setContentPane(panelMain);
+        setMinimumSize(new Dimension(2000,800));
+        setResizable(false);
+    }
+
+    public static void main(String[] args) {
+
+        Dashboard_Manager dashboard_manager = new Dashboard_Manager();
+        dashboard_manager.setVisible(true);
+    }
 }
