@@ -9,8 +9,8 @@ public class Booking {
     int Booking_id;
     Date FromDate;
     Date ToDate;
-    Time StartTime;
-    Time EndTime;
+    String StartTime;
+    String EndTime;
     String Occasion;
     String Period;
     String Client;
@@ -19,8 +19,11 @@ public class Booking {
     String RoomNo;
 
     //add Main Constructor
+    public Booking(){
 
-    public Booking(int booking_id, Date fromDate, Date toDate, Time startTime, Time endTime, String occasion, String period, String client, int contactNo, String notes, String roomNo) {
+    }
+
+    public Booking(int booking_id, Date fromDate, Date toDate, String startTime, String endTime, String occasion, String period, String client, int contactNo, String notes, String roomNo) {
         Booking_id = booking_id;
         FromDate = fromDate;
         ToDate = toDate;
@@ -60,19 +63,19 @@ public class Booking {
         ToDate = toDate;
     }
 
-    public Time getStartTime() {
+    public String getStartTime() {
         return StartTime;
     }
 
-    public void setStartTime(Time startTime) {
+    public void setStartTime(String startTime) {
         StartTime = startTime;
     }
 
-    public Time getEndTime() {
+    public String getEndTime() {
         return EndTime;
     }
 
-    public void setEndTime(Time endTime) {
+    public void setEndTime(String endTime) {
         EndTime = endTime;
     }
 

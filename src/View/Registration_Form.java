@@ -43,6 +43,8 @@ public class Registration_Form extends JFrame{
         btn_Register.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
+
+                //create an object from Model Class
                 User user = new User();
 
                 //concurrency
@@ -76,8 +78,10 @@ public class Registration_Form extends JFrame{
                     User_Controller userController = new User_Controller();
                     userController.save(user);
 
+                    //close the current UI
                     dispose();
 
+                    //open next related UI
                     Login_Form login_form = new Login_Form();
                     login_form.setVisible(true);
 

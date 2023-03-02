@@ -20,6 +20,7 @@ public class Booking_Controller implements Booking_Interface {
     public void save(Booking booking) {
 
         try {
+
             //insert query
             String query = "INSERT INTO booking (Booking_id, FromDate, ToDate, StartTime, EndTime, " +
                     "Occasion, Period, Client, ContactNo, Notes, RoomNo) " +
@@ -106,7 +107,7 @@ public class Booking_Controller implements Booking_Interface {
             while (resultSet.next()) {
 
                 bookingView = new Booking(resultSet.getInt("Booking_id "), resultSet.getDate("FromDate"),
-                        resultSet.getDate("ToDate"), resultSet.getTime("StartTime"), resultSet.getTime("EndTime"),
+                        resultSet.getDate("ToDate"), resultSet.getString("StartTime"), resultSet.getString("EndTime"),
                         resultSet.getString("Occasion"), resultSet.getString("Period"), resultSet.getString("Client"),
                         resultSet.getInt("ContactNo"), resultSet.getString("Notes"), resultSet.getString("RoomNo"));
 
@@ -143,8 +144,8 @@ public class Booking_Controller implements Booking_Interface {
                                             int booking_id = resultSet.getInt("Booking_id");
                                             Date FromDate = resultSet.getDate("FromDate");
                                             Date ToDate = resultSet.getDate("ToDate");
-                                            Time StartTime = resultSet.getTime("StartTime");
-                                            Time EndTime = resultSet.getTime("EndTime");
+                                            String StartTime = resultSet.getString("StartTime");
+                                            String EndTime = resultSet.getString("EndTime");
                                             String Occasion = resultSet.getString("Occasion");
                                             String Period = resultSet.getString("Period");
                                             String 	Client = resultSet.getString("Client");

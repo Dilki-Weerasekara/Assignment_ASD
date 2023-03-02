@@ -139,6 +139,7 @@
           </grid>
         </constraints>
         <properties>
+          <font name="Calibri Light" size="18" style="1"/>
           <model>
             <item value="Manager"/>
             <item value="Clerk"/>

@@ -30,7 +30,7 @@ public class User_Controller implements User_Interface {
             statement.execute(query);
 
             //Show message dialog
-            JOptionPane.showMessageDialog(null,"Successfully Saved","information",JOptionPane.INFORMATION_MESSAGE);
+            JOptionPane.showMessageDialog(null,"Successfully Registered","information",JOptionPane.INFORMATION_MESSAGE);
 
         }catch (Exception e){
             e.printStackTrace();

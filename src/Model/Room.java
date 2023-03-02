@@ -15,9 +15,12 @@ public class Room {
     Time StartTime;
     Time EndTime;
 
+    //Add Main constructor
+    public Room(){
+
+    }
 
 
-    //Main constructor
     public Room(String roomNo, String type, int size, String status, String reason, Date fromDate, Date toDate, Time startTime, Time endTime) {
         RoomNo = roomNo;
         Type = type;
