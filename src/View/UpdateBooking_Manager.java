@@ -1,8 +1,11 @@
 package View;
 
 import javax.swing.*;
+import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
-public class UpdateBooking_Manager {
+public class UpdateBooking_Manager extends JFrame {
     private JPanel panelMain;
     private JLabel lbl_UpdateBooking;
     private JLabel lbl_RoomNo;
@@ -31,4 +34,27 @@ public class UpdateBooking_Manager {
     private JTextField textField6;
     private JComboBox comboBox1;
     private JComboBox comboBox2;
+
+    //constructor
+    public UpdateBooking_Manager(){
+        super();
+        setTitle("Update Booking Manager");
+        setContentPane(panelMain);
+        setMinimumSize(new Dimension(700,500));
+        setResizable(false);
+        btn_Cancel.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                dispose();
+            }
+        });
+    }
+
+
+    public static void main(String[] args) {
+
+        //create a new object
+        UpdateBooking_Manager updateBooking_manager = new UpdateBooking_Manager();
+        updateBooking_manager.setVisible(true);
+    }
 }
