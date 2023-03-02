@@ -33,23 +33,27 @@ public class AddRoom_Manager extends JFrame{
     private JLabel lbl_End;
     private JLabel lbl_Start;
 
+    //constructor
     public AddRoom_Manager(){
         super();
         setTitle("Add Room Form");
         setContentPane(panelMain);
         setMinimumSize(new Dimension(900,500));
         setResizable(false);
-        setVisible(true);
+
         btn_Cancel.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
                 dispose();
             }
         });
+
     }
 
     public static void main(String[] args) {
+        //create a new object
         AddRoom_Manager addRoomManager = new AddRoom_Manager();
+        addRoomManager.setVisible(true);
     }
 
 }
