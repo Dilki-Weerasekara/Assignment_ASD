@@ -1,8 +1,11 @@
 package View;
 
 import javax.swing.*;
+import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
-public class UpdateRoom_Form {
+public class UpdateRoom_Form extends JFrame{
     private JPanel panelMain;
     private JLabel lbl_UpdateRoom;
     private JLabel lbl_RoomNo;
@@ -23,4 +26,28 @@ public class UpdateRoom_Form {
     private JTextField textField4;
     private JLabel lbl_TimeFrom;
     private JLabel lbl_TimeTo;
+
+    //constructor
+    public UpdateRoom_Form(){
+        super();
+        setTitle("Update Room Form");
+        setContentPane(panelMain);
+        setMinimumSize(new Dimension(750,450));
+        setResizable(false);
+
+        //cancel button
+        btn_Cancel.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                dispose();
+            }
+        });
+    }
+
+    public static void main(String[] args) {
+
+        //create a new object
+        UpdateRoom_Form updateRoomForm = new UpdateRoom_Form();
+        updateRoomForm.setVisible(true);
+    }
 }
