@@ -130,16 +130,6 @@
           <text value="Start"/>
         </properties>
       </component>
-      <component id="c3321" class="javax.swing.JRadioButton" binding="btn_radioComputLab">
-        <constraints>
-          <grid row="2" column="1" row-span="1" col-span="2" vsize-policy="0" hsize-policy="3" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
-        </constraints>
-        <properties>
-          <background color="-65642"/>
-          <font name="SansSerif" size="18" style="1"/>
-          <text value="Computer Lab"/>
-        </properties>
-      </component>
       <component id="d8804" class="javax.swing.JTextField" binding="txt_RoomNo">
         <constraints>
           <grid row="1" column="1" row-span="1" col-span="6" vsize-policy="0" hsize-policy="6" anchor="0" fill="1" indent="0" use-parent-layout="false">
@@ -168,16 +158,6 @@
         </constraints>
         <properties>
           <font name="Calibri Light" size="18" style="1"/>
-        </properties>
-      </component>
-      <component id="885b1" class="javax.swing.JRadioButton" binding="btn_radioTutorial">
-        <constraints>
-          <grid row="2" column="3" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
-        </constraints>
-        <properties>
-          <background color="-65642"/>
-          <font name="SansSerif" size="18" style="1"/>
-          <text value="Tutorial Room"/>
         </properties>
       </component>
       <component id="b2853" class="javax.swing.JButton" binding="btn_Cancel">
@@ -248,14 +228,17 @@
           <font name="Calibri Light" size="18" style="1"/>
         </properties>
       </component>
-      <component id="91152" class="javax.swing.JRadioButton" binding="btn_radioLecture_Theatre">
+      <component id="3f8b" class="javax.swing.JComboBox" binding="comboBox_Type">
         <constraints>
-          <grid row="2" column="4" row-span="1" col-span="2" vsize-policy="0" hsize-policy="3" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+          <grid row="2" column="1" row-span="1" col-span="6" vsize-policy="0" hsize-policy="2" anchor="8" fill="1" indent="0" use-parent-layout="false"/>
         </constraints>
         <properties>
-          <background color="-65642"/>
           <font name="SansSerif" size="18" style="1"/>
-          <text value="Lecture Theatre"/>
+          <model>
+            <item value="Computer Lab"/>
+            <item value="Tutorial Room"/>
+            <item value="Lecture Theatre"/>
+          </model>
         </properties>
       </component>
     </children>
