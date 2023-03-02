@@ -1,9 +1,12 @@
 package View;
 
 import javax.swing.*;
+import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
 
-public class AddBooking_Form {
+public class AddBooking_Form extends JFrame{
     private JPanel panelMain;
     private JLabel lbl_RoomNo;
     private JLabel lbl_BookingDate;
@@ -35,4 +38,23 @@ public class AddBooking_Form {
     private JLabel lbl_ShowSize;
     private JLabel lbl_RoomType;
     private JLabel lbl_ShowType;
+
+    public AddBooking_Form(){
+        super();
+        setTitle("Add Booking Form");
+        setContentPane(panelMain);
+        setMinimumSize(new Dimension(700,500));
+        setResizable(false);
+        cancelButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                dispose();
+            }
+        });
+    }
+    public static void main(String[] args) {
+        //create a  new object
+        AddBooking_Form addBooking_form = new AddBooking_Form();
+        addBooking_form.setVisible(true);
+    }
 }
