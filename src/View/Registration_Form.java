@@ -1,8 +1,11 @@
 package View;
 
 import javax.swing.*;
+import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
-public class Registration_Form {
+public class Registration_Form extends JFrame{
     private JPanel panelMain;
     private JLabel lbl_UserReg;
     private JLabel lbl_FullName;
@@ -18,4 +21,26 @@ public class Registration_Form {
     private JTextField txt_UserName;
     private JPasswordField txt_Password;
     private JPasswordField txt_ConfPw;
+
+    //constructor
+    public Registration_Form(){
+        super();
+        setTitle("User Registration Form");
+        setContentPane(panelMain);
+        setMinimumSize(new Dimension(600,400));
+        setResizable(false);
+
+        btn_Cansel.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                dispose();
+            }
+        });
+    }
+
+    public static void main(String[] args) {
+        //create a new object
+        Registration_Form registration_form = new Registration_Form();
+        registration_form.setVisible(true);
+    }
 }
