@@ -1,9 +1,14 @@
 package View;
 
+import Controller.User_Controller;
+import Model.User;
+
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
 
 public class Registration_Form extends JFrame{
     private JPanel panelMain;
@@ -15,12 +20,11 @@ public class Registration_Form extends JFrame{
     private JLabel lbl_ConfPw;
     private JButton btn_Register;
     private JButton btn_Cansel;
-    private JTextField textField1;
-    private JRadioButton btn_radioManager;
-    private JRadioButton btn_radioClerk;
-    private JTextField txt_UserName;
+    private JTextField txt_Username;
+    private JTextField txt_Email;
     private JPasswordField txt_Password;
     private JPasswordField txt_ConfPw;
+    private JComboBox comboBoxPosision;
 
     //constructor
     public Registration_Form(){
@@ -34,6 +38,53 @@ public class Registration_Form extends JFrame{
             @Override
             public void actionPerformed(ActionEvent e) {
                 dispose();
+            }
+        });
+        btn_Register.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                User user = new User();
+
+                //concurrency
+                ExecutorService executorService = Executors.newSingleThreadExecutor();
+
+                executorService.submit(new Runnable() {
+                    @Override
+                    public void run() {
+                        try{
+                            //get values
+                            String fullName = txt_Username.getText().toString();
+                            String position = comboBoxPosision.getSelectedItem().toString();
+                            String email = txt_Email.getText().toString();
+                            String password = txt_Password.getText().toString();
+                            String cpassword = txt_ConfPw.getText().toString();
+
+                            user.setName(fullName);
+                            user.setEmail(email);
+                            user.setPassword(password);
+                            user.setPosition(position);
+                        } catch (Exception e){
+                            System.out.println(e.getMessage());
+                        }
+                    }
+                });
+                executorService.shutdown();
+
+
+
+                try {
+                    User_Controller userController = new User_Controller();
+                    userController.save(user);
+
+                    dispose();
+
+                    Login_Form login_form = new Login_Form();
+                    login_form.setVisible(true);
+
+                } catch (Exception ex) {
+                    throw new RuntimeException(ex);
+                }
+
             }
         });
     }

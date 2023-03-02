@@ -10,6 +10,9 @@ public class User {
     String Password;
 
     //add Main Constructor
+    public User () {
+
+    }
     public User(int user_id, String name, String position, String email, String password) {
         User_id = user_id;
         Name = name;
