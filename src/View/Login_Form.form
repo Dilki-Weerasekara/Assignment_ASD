@@ -33,28 +33,6 @@
           <text value="Password"/>
         </properties>
       </component>
-      <component id="dc899" class="javax.swing.JFormattedTextField" default-binding="true">
-        <constraints>
-          <grid row="3" column="0" row-span="1" col-span="13" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
-            <preferred-size width="150" height="-1"/>
-          </grid>
-        </constraints>
-        <properties>
-          <font name="SansSerif" size="18" style="1"/>
-          <text value="Forget password Click here"/>
-        </properties>
-      </component>
-      <component id="f8fb8" class="javax.swing.JFormattedTextField" binding="dontHaveAnAccountFormattedTextField" default-binding="true">
-        <constraints>
-          <grid row="5" column="0" row-span="1" col-span="13" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
-            <preferred-size width="150" height="-1"/>
-          </grid>
-        </constraints>
-        <properties>
-          <font name="SansSerif" size="18" style="1"/>
-          <text value="Dont have an account Register here "/>
-        </properties>
-      </component>
       <component id="abca6" class="javax.swing.JTextField" binding="txt_Username">
         <constraints>
           <grid row="1" column="2" row-span="1" col-span="11" vsize-policy="0" hsize-policy="6" anchor="0" fill="1" indent="0" use-parent-layout="false">
@@ -89,7 +67,7 @@
       </component>
       <component id="2a7b3" class="javax.swing.JButton" binding="btn_cansel">
         <constraints>
-          <grid row="4" column="6" row-span="1" col-span="2" vsize-policy="0" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+          <grid row="4" column="6" row-span="1" col-span="4" vsize-policy="0" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
         </constraints>
         <properties>
           <background color="-62172"/>
@@ -118,6 +96,22 @@
           <font name="JetBrains Mono ExtraBold" size="48" style="1"/>
           <text value="Login"/>
           <visible value="true"/>
+        </properties>
+      </component>
+      <component id="b120e" class="javax.swing.JButton" binding="btn_forgetPw">
+        <constraints>
+          <grid row="3" column="2" row-span="1" col-span="11" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <text value="Forget Password Click Here"/>
+        </properties>
+      </component>
+      <component id="72cc" class="javax.swing.JButton" binding="dontHaveAnAccountButton" default-binding="true">
+        <constraints>
+          <grid row="5" column="2" row-span="1" col-span="11" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <text value="Dont have an Account Register Here "/>
         </properties>
       </component>
     </children>
