@@ -113,8 +113,7 @@ public class Booking_Controller implements Booking_Interface {
 
             while (resultSet.next()) {
 
-                bookingView = new Booking(resultSet.getInt("Booking_id "), resultSet.getDate("FromDate"),
-                        resultSet.getDate("ToDate"), resultSet.getString("StartTime"), resultSet.getString("EndTime"),
+                bookingView = new Booking(resultSet.getString("StartTime"), resultSet.getString("EndTime"),
                         resultSet.getString("Occasion"), resultSet.getString("Period"), resultSet.getString("Client"),
                         resultSet.getInt("ContactNo"), resultSet.getString("Notes"), resultSet.getString("RoomNo"));
 

@@ -37,6 +37,18 @@ public class Booking {
         RoomNo = roomNo;
     }
 
+    public Booking(String startTime, String endTime, String occasion, String period, String client, int contactNo, String notes, String roomNo) {
+
+        StartTime = startTime;
+        EndTime = endTime;
+        Occasion = occasion;
+        Period = period;
+        Client = client;
+        ContactNo = contactNo;
+        Notes = notes;
+        RoomNo = roomNo;
+    }
+
     public Booking(String roomNo) {
         RoomNo = roomNo;
     }
