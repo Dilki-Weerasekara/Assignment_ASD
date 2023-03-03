@@ -197,7 +197,7 @@
       <component id="104" class="javax.swing.JTextField" binding="txt_Reason">
         <constraints>
           <grid row="4" column="6" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="0" fill="1" indent="0" use-parent-layout="false">
-            <preferred-size width="150" height="-1"/>
+            <preferred-size width="150" height="35"/>
           </grid>
         </constraints>
         <properties>
@@ -229,7 +229,7 @@
       </component>
       <grid id="37245" binding="fromDate" layout-manager="BorderLayout" hgap="0" vgap="0">
         <constraints>
-          <grid row="5" column="2" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false">
+          <grid row="5" column="2" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false">
             <preferred-size width="0" height="53"/>
           </grid>
         </constraints>
@@ -239,7 +239,7 @@
       </grid>
       <grid id="4f849" binding="toDate" layout-manager="BorderLayout" hgap="0" vgap="0">
         <constraints>
-          <grid row="5" column="6" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false">
+          <grid row="5" column="6" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false">
             <preferred-size width="24" height="53"/>
           </grid>
         </constraints>

@@ -6,15 +6,19 @@ import javax.swing.*;
 import javax.swing.table.DefaultTableModel;
 import javax.swing.table.JTableHeader;
 import java.awt.*;
-import java.util.List;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import java.util.Date;
+import java.util.List;
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
 
 public class ViewRoom_Manager extends JFrame{
     private JLabel lbl_RoomDetails;
     private JTextField txt_Search;
     private JTable tb_ViewRoomDetails;
     private JPanel panelMain;
-    private JLabel lbl_searchIcon;
+    private JButton btn_search;
 
     //constructor
     public ViewRoom_Manager(){
@@ -24,6 +28,39 @@ public class ViewRoom_Manager extends JFrame{
         setMinimumSize(new Dimension(800,400));
         setResizable(false);
         setVisible(true);
+        btn_search.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                //create an object from Model Class
+                Room room = new Room();
+
+                //concurrency
+                ExecutorService executorService = Executors.newSingleThreadExecutor();
+
+                executorService.submit(new Runnable() {
+                    @Override
+                    public void run() {
+                        try{
+                            //get values
+                            String roomNo = txt_Search.getText().toString();
+                            Room_Controller room_controller = new Room_Controller();
+                            room_controller.get(roomNo);
+
+
+
+                           //set Values
+                           // room.setRoomNo(roomNo);
+
+                        } catch (Exception e){
+                            System.out.println(e.getMessage());
+                        }
+                    }
+                });
+                executorService.shutdown();
+
+//
+            }
+        });
     }
 
     //Re call method for table view data

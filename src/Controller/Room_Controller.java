@@ -168,7 +168,7 @@ public class Room_Controller implements Room_Interface {
 
         try {
             //search query via room no
-            String query = "SELECT * FROM room WHERE RoomNo = " + RoomNo + " ";
+            String query = "SELECT * FROM room WHERE RoomNo = '" + RoomNo + "'";
 
             //set query
             PreparedStatement preparedStatement = con.prepareStatement(query);
