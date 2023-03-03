@@ -1,9 +1,13 @@
 package Controller;
 
 import Model.User;
+import View.Dashboard_Clerk;
+import View.Dashboard_Manager;
 
 import javax.swing.*;
 import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 import java.sql.Statement;
 
 
@@ -58,5 +62,36 @@ public class User_Controller implements User_Interface {
             e.printStackTrace();
         }
 
+    }
+
+    public void login(User user){
+        try{
+            //select query
+            String query = "SELECT * FROM `user` WHERE  Email = '"+user.getEmail()+"' AND Password = '"+user.getPassword()+"' ";
+
+            //set query
+            PreparedStatement preparedStatement = con.prepareStatement(query);
+
+            //execute query
+            ResultSet resultSet = preparedStatement.executeQuery();
+
+            if(resultSet.next()){
+
+                //check position vise
+                if (resultSet.getString("Position").equals("Manager")){
+                    Dashboard_Manager dashboard_manager = new Dashboard_Manager();
+                    dashboard_manager.setVisible(true);
+                } else {
+                    Dashboard_Clerk dashboard_clerk = new Dashboard_Clerk();
+                    dashboard_clerk.setVisible(true);
+                }
+            }
+
+
+
+
+        }catch(Exception e ){
+            e.printStackTrace();
+        }
     }
 }
