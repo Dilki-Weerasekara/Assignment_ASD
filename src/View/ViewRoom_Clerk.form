@@ -41,16 +41,21 @@
           <text value=""/>
         </properties>
       </component>
-      <component id="bdc47" class="javax.swing.JTable" binding="tb_ViewRoomDetails">
+      <scrollpane id="7ea1">
         <constraints>
-          <grid row="2" column="0" row-span="1" col-span="2" vsize-policy="6" hsize-policy="6" anchor="0" fill="3" indent="0" use-parent-layout="false">
-            <preferred-size width="150" height="50"/>
-          </grid>
+          <grid row="2" column="0" row-span="1" col-span="2" vsize-policy="7" hsize-policy="7" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
         </constraints>
-        <properties>
-          <font name="Calibri Light" size="18" style="1"/>
-        </properties>
-      </component>
+        <properties/>
+        <border type="none"/>
+        <children>
+          <component id="bdc47" class="javax.swing.JTable" binding="tb_ViewRoomDetails">
+            <constraints/>
+            <properties>
+              <font name="Calibri Light" size="16" style="1"/>
+            </properties>
+          </component>
+        </children>
+      </scrollpane>
     </children>
   </grid>
 </form>

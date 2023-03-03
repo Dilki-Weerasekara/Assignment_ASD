@@ -56,7 +56,7 @@
           <component id="8a641" class="javax.swing.JTable" binding="tb_ViewRoomDetails">
             <constraints/>
             <properties>
-              <font name="Calibri Light" size="18" style="1"/>
+              <font name="Calibri Light" size="16" style="1"/>
               <intercellSpacing width="0" height="0"/>
             </properties>
           </component>
