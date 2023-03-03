@@ -1,13 +1,16 @@
 package View;
 
 import Controller.Booking_Controller;
+import Controller.Room_Controller;
 import Model.Booking;
+import Model.Room;
 import com.toedter.calendar.JDateChooser;
 
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Date;
 import java.util.concurrent.ExecutorService;
@@ -53,6 +56,7 @@ public class AddBooking_Form extends JFrame{
         setContentPane(panelMain);
         setMinimumSize(new Dimension(700,500));
         setResizable(false);
+        setVisible(true);
 
         //add Calendar
         Calendar calendar = Calendar.getInstance();
@@ -147,9 +151,25 @@ public class AddBooking_Form extends JFrame{
             }
         });
     }
+
+    public void viewRoomBooking(){
+        try {
+            Booking_Controller booking_controller = new Booking_Controller();
+            ArrayList<Room> list = booking_controller.viewBookingAvailable();
+
+            for (Room room : list){
+                String room_No = room.getRoomNo();
+                comboBox_roomNo.addItem(room_No);
+            }
+
+        } catch (Exception e) {
+            throw new RuntimeException(e);
+        }
+
+    }
     public static void main(String[] args) {
         //create a  new object
         AddBooking_Form addBooking_form = new AddBooking_Form();
-        addBooking_form.setVisible(true);
+        addBooking_form.viewRoomBooking();
     }
 }

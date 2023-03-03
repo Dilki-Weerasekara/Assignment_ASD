@@ -157,6 +157,39 @@ public class Booking_Controller implements Booking_Interface {
         return viewList;
     }
 
+    public ArrayList<Room> viewBookingAvailable() {
+        //create new Object in ArrayList
+        ArrayList<Room> viewList = new ArrayList<>();
+
+
+        try {
+            //view all details
+            String query = "SELECT RoomNo FROM room where Status = 'Available'";
+
+            //set query
+            PreparedStatement preparedStatement = con.prepareStatement(query);
+
+            //execute query
+            ResultSet resultSet = preparedStatement.executeQuery();
+
+            //create new object
+            Room roomView;
+
+            //retrieve data row by row
+            while (resultSet.next()) {
+                roomView = new Room(resultSet.getString("RoomNo"));
+
+                viewList.add(roomView);
+            }
+
+        } catch (Exception e) {
+
+            e.printStackTrace();
+
+        }
+
+        return viewList;
+    }
     // search using ID
     @Override
     public Booking get(int Booking_id) {
