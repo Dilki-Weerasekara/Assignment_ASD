@@ -33,7 +33,7 @@
           <text value="Password"/>
         </properties>
       </component>
-      <component id="abca6" class="javax.swing.JTextField" binding="txt_Username">
+      <component id="abca6" class="javax.swing.JTextField" binding="txt_Email">
         <constraints>
           <grid row="1" column="2" row-span="1" col-span="11" vsize-policy="0" hsize-policy="6" anchor="0" fill="1" indent="0" use-parent-layout="false">
             <preferred-size width="150" height="-1"/>
@@ -76,7 +76,7 @@
           <text value="Cancel"/>
         </properties>
       </component>
-      <component id="3cc9b" class="javax.swing.JButton" binding="btn_Logic">
+      <component id="3cc9b" class="javax.swing.JButton" binding="btn_Login">
         <constraints>
           <grid row="4" column="5" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
         </constraints>
@@ -106,7 +106,7 @@
           <text value="Forget Password Click Here"/>
         </properties>
       </component>
-      <component id="72cc" class="javax.swing.JButton" binding="dontHaveAnAccountButton" default-binding="true">
+      <component id="72cc" class="javax.swing.JButton" binding="btn_NotRegister">
         <constraints>
           <grid row="5" column="2" row-span="1" col-span="11" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
         </constraints>
