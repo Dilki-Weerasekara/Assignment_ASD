@@ -96,7 +96,9 @@
       </component>
       <component id="8c6b9" class="javax.swing.JLabel" binding="lbl_Date">
         <constraints>
-          <grid row="5" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+          <grid row="5" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false">
+            <preferred-size width="95" height="53"/>
+          </grid>
         </constraints>
         <properties>
           <font name="SansSerif" size="18" style="1"/>
@@ -105,7 +107,9 @@
       </component>
       <component id="fd256" class="javax.swing.JLabel" binding="lbl_From">
         <constraints>
-          <grid row="5" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+          <grid row="5" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false">
+            <preferred-size width="42" height="53"/>
+          </grid>
         </constraints>
         <properties>
           <font name="SansSerif" size="18" style="1"/>
@@ -133,16 +137,6 @@
       <component id="d8804" class="javax.swing.JTextField" binding="txt_RoomNo">
         <constraints>
           <grid row="1" column="1" row-span="1" col-span="6" vsize-policy="0" hsize-policy="6" anchor="0" fill="1" indent="0" use-parent-layout="false">
-            <preferred-size width="150" height="-1"/>
-          </grid>
-        </constraints>
-        <properties>
-          <font name="Calibri Light" size="18" style="1"/>
-        </properties>
-      </component>
-      <component id="424ab" class="javax.swing.JTextField" binding="textField1" default-binding="true">
-        <constraints>
-          <grid row="5" column="2" row-span="1" col-span="2" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
             <preferred-size width="150" height="-1"/>
           </grid>
         </constraints>
@@ -182,7 +176,9 @@
       </component>
       <component id="5676d" class="javax.swing.JLabel" binding="lbl_To">
         <constraints>
-          <grid row="5" column="5" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+          <grid row="5" column="5" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false">
+            <preferred-size width="22" height="53"/>
+          </grid>
         </constraints>
         <properties>
           <font name="SansSerif" size="18" style="1"/>
@@ -201,16 +197,6 @@
       <component id="104" class="javax.swing.JTextField" binding="txt_Reason">
         <constraints>
           <grid row="4" column="6" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="0" fill="1" indent="0" use-parent-layout="false">
-            <preferred-size width="150" height="-1"/>
-          </grid>
-        </constraints>
-        <properties>
-          <font name="Calibri Light" size="18" style="1"/>
-        </properties>
-      </component>
-      <component id="b6b0e" class="javax.swing.JTextField" binding="textField2" default-binding="true">
-        <constraints>
-          <grid row="5" column="6" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
             <preferred-size width="150" height="-1"/>
           </grid>
         </constraints>
@@ -241,6 +227,26 @@
           </model>
         </properties>
       </component>
+      <grid id="37245" binding="fromDate" layout-manager="BorderLayout" hgap="0" vgap="0">
+        <constraints>
+          <grid row="5" column="2" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false">
+            <preferred-size width="0" height="53"/>
+          </grid>
+        </constraints>
+        <properties/>
+        <border type="none"/>
+        <children/>
+      </grid>
+      <grid id="4f849" binding="toDate" layout-manager="BorderLayout" hgap="0" vgap="0">
+        <constraints>
+          <grid row="5" column="6" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false">
+            <preferred-size width="24" height="53"/>
+          </grid>
+        </constraints>
+        <properties/>
+        <border type="none"/>
+        <children/>
+      </grid>
     </children>
   </grid>
 </form>

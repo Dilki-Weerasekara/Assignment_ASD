@@ -3,12 +3,14 @@ package View;
 import Controller.Room_Controller;
 import Controller.User_Controller;
 import Model.Room;
+import com.toedter.calendar.JDateChooser;
 
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.sql.Date;
+import java.util.Calendar;
+import java.util.Date;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
@@ -28,15 +30,15 @@ public class AddRoom_Manager extends JFrame{
     private JTextField txt_Reason;
     private JLabel lbl_Date;
     private JLabel lbl_From;
-    private JTextField textField1;
     private JLabel lbl_To;
-    private JTextField textField2;
     private JLabel lbl_TimePeriod;
     private JTextField txt_Start;
     private JTextField txt_End;
     private JLabel lbl_End;
     private JLabel lbl_Start;
     private JComboBox comboBox_Type;
+    private JPanel fromDate;
+    private JPanel toDate;
 
     //constructor
     public AddRoom_Manager(){
@@ -45,6 +47,20 @@ public class AddRoom_Manager extends JFrame{
         setContentPane(panelMain);
         setMinimumSize(new Dimension(900,500));
         setResizable(false);
+
+        //add Calendar
+        Calendar calendar = Calendar.getInstance();
+
+        //from Date
+        JDateChooser fdateChooser = new JDateChooser(calendar.getTime());
+        fdateChooser.setDateFormatString("yyyy-MM-dd");
+        fromDate.add(fdateChooser);
+
+        //To Date
+        JDateChooser tdateChooser = new JDateChooser(calendar.getTime());
+        tdateChooser.setDateFormatString("yyyy-MM-dd");
+        toDate.add(tdateChooser);
+
 
         btn_Cancel.addActionListener(new ActionListener() {
             @Override
@@ -74,8 +90,14 @@ public class AddRoom_Manager extends JFrame{
                             String currentStatus = comboBox_status.getSelectedItem().toString();
                             String reason = txt_Reason.getText().toString();
 
-                            //Date and Time get
+                            //Room dates
+                            Date fromDate = fdateChooser.getDate();
+                            Date toDate = tdateChooser.getDate();
 
+                            //Room Times
+
+                            String startTime = txt_Start.getText().toString();
+                            String endTime = txt_End.getText().toString();
 
 
                             room.setRoomNo(roomNo);
@@ -83,6 +105,12 @@ public class AddRoom_Manager extends JFrame{
                             room.setSize(roomSize);
                             room.setStatus(currentStatus);
                             room.setReason(reason);
+                            room.setStartTime(startTime);
+                            room.setEndTime(endTime);
+                            room.setFromDate(fromDate);
+                            room.setToDate(toDate);
+
+
 
                             //Date and Time set
 

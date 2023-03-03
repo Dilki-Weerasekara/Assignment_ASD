@@ -12,8 +12,8 @@ public class Room {
     String Reason;
     Date FromDate;
     Date ToDate;
-    Time StartTime;
-    Time EndTime;
+    String StartTime;
+    String EndTime;
 
     //Add Main constructor
     public Room(){
@@ -21,7 +21,7 @@ public class Room {
     }
 
 
-    public Room(String roomNo, String type, int size, String status, String reason, Date fromDate, Date toDate, Time startTime, Time endTime) {
+    public Room(String roomNo, String type, int size, String status, String reason, Date fromDate, Date toDate, String startTime, String endTime) {
         RoomNo = roomNo;
         Type = type;
         Size = size;
@@ -90,19 +90,19 @@ public class Room {
         ToDate = toDate;
     }
 
-    public Time getStartTime() {
+    public String getStartTime() {
         return StartTime;
     }
 
-    public void setStartTime(Time startTime) {
+    public void setStartTime(String startTime) {
         StartTime = startTime;
     }
 
-    public Time getEndTime() {
+    public String getEndTime() {
         return EndTime;
     }
 
-    public void setEndTime(Time endTime) {
+    public void setEndTime(String endTime) {
         EndTime = endTime;
     }
 }

@@ -7,7 +7,7 @@ import java.sql.DriverManager;
 public class Db_Connection {
     public static Connection getDb_Connection() throws Exception {
         Class.forName("com.mysql.cj.jdbc.Driver");
-        Connection db = DriverManager.getConnection("jdbc:mysql://localhost/booking_system", "root", "");
+        Connection db = DriverManager.getConnection("jdbc:mysql://localhost/new_booking_system", "root", "");
         return db;
     }
 

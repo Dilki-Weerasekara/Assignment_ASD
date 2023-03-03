@@ -110,7 +110,7 @@ public class Room_Controller implements Room_Interface {
             while (resultSet.next()) {
                 roomView = new Room(resultSet.getString("RoomNo"), resultSet.getString("Type"), resultSet.getInt("Size"),
                         resultSet.getString("Status"), resultSet.getString("Reason"), resultSet.getDate("FromDate"),
-                        resultSet.getDate("ToDate"), resultSet.getTime("StartTime"), resultSet.getTime("EndTime"));
+                        resultSet.getDate("ToDate"), resultSet.getString("StartTime"), resultSet.getString("EndTime"));
 
                 viewList.add(roomView);
             }
@@ -152,8 +152,8 @@ public class Room_Controller implements Room_Interface {
                                         String Reason = resultSet.getString("Reason");
                                         Date FromDate = resultSet.getDate("FromDate");
                                         Date ToDate = resultSet.getDate("ToDate");
-                                        Time StartTime = resultSet.getTime("StartTime");
-                                        Time EndTime = resultSet.getTime("EndTime");
+                                        String StartTime = resultSet.getString("StartTime");
+                                        String EndTime = resultSet.getString("EndTime");
 
                                         //pass values to model class constructor
                                         room = new Room(roomNo,Type,Size,Status,Reason,FromDate,ToDate,StartTime,EndTime);

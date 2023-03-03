@@ -58,6 +58,8 @@ public class AddBooking_Form extends JFrame{
         Calendar calendar = Calendar.getInstance();
         JDateChooser fdateChooser = new JDateChooser(calendar.getTime());
         fdateChooser.setDateFormatString("yyyy-MM-dd");
+
+        //set value to panel
         fromDate.add(fdateChooser);
 
         JDateChooser tdateChooser = new JDateChooser(calendar.getTime());
@@ -87,14 +89,17 @@ public class AddBooking_Form extends JFrame{
                         try{
 
                             //get values
-                            String roomNo = comboBox_roomNo.getSelectedItem().toString();
+                          //  String roomNo = comboBox_roomNo.getSelectedItem().toString();
+
 
                             //Booking dates
                             Date fromDate = fdateChooser.getDate();
                             Date toDate = tdateChooser.getDate();
+
                             //Booking Times
-                            String sTime = txt_stratTime.toString();
-                            String eTime = txt_endTime.toString();
+                            String sTime = txt_stratTime.getText().toString();
+                            String eTime = txt_endTime.getText().toString();
+
                             String occasion = comboBox_occasion.getSelectedItem().toString();
                             String period = comboBox_AMPM.getSelectedItem().toString();
                             String client = txt_ClientName.getText().toString();
@@ -103,12 +108,17 @@ public class AddBooking_Form extends JFrame{
 
 
                             //set values
-                            booking.setRoomNo(roomNo);
+                            booking.setRoomNo("C216");
                             booking.setOccasion(occasion);
                             booking.setPeriod(period);
                             booking.setClient(client);
                             booking.setContactNo(contact);
                             booking.setNotes(note);
+                            booking.setStartTime(sTime);
+                            booking.setEndTime(eTime);
+                            booking.setFromDate(fromDate);
+                            booking.setToDate(toDate);
+
 
                         }catch (Exception e){
                             System.out.println(e.getMessage());
