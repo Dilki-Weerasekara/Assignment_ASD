@@ -89,7 +89,7 @@ public class AddBooking_Form extends JFrame{
                         try{
 
                             //get values
-                          //  String roomNo = comboBox_roomNo.getSelectedItem().toString();
+                           String roomNo = comboBox_roomNo.getSelectedItem().toString();
 
 
                             //Booking dates
@@ -108,7 +108,7 @@ public class AddBooking_Form extends JFrame{
 
 
                             //set values
-                            booking.setRoomNo("C216");
+                            booking.setRoomNo(roomNo);
                             booking.setOccasion(occasion);
                             booking.setPeriod(period);
                             booking.setClient(client);
