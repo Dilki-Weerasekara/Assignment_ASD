@@ -144,7 +144,7 @@
           <text value="From"/>
         </properties>
       </component>
-      <component id="75662" class="javax.swing.JTextField" binding="textField3" default-binding="true">
+      <component id="75662" class="javax.swing.JTextField" binding="txt_datefrom">
         <constraints>
           <grid row="5" column="6" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
             <preferred-size width="150" height="-1"/>
@@ -154,7 +154,7 @@
           <font name="Calibri Light" size="18" style="1"/>
         </properties>
       </component>
-      <component id="e2160" class="javax.swing.JTextField" default-binding="true">
+      <component id="e2160" class="javax.swing.JTextField" binding="txt_timeto">
         <constraints>
           <grid row="6" column="9" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
             <preferred-size width="150" height="-1"/>
@@ -164,7 +164,7 @@
           <font name="Calibri Light" size="18" style="1"/>
         </properties>
       </component>
-      <component id="29264" class="javax.swing.JTextField" binding="textField4" default-binding="true">
+      <component id="29264" class="javax.swing.JTextField" binding="txt_dateto">
         <constraints>
           <grid row="5" column="9" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
             <preferred-size width="150" height="-1"/>
@@ -174,7 +174,7 @@
           <font name="Calibri Light" size="18" style="1"/>
         </properties>
       </component>
-      <component id="7afd1" class="javax.swing.JTextField" default-binding="true">
+      <component id="7afd1" class="javax.swing.JTextField" binding="txt_timefrom">
         <constraints>
           <grid row="6" column="6" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
             <preferred-size width="150" height="-1"/>
