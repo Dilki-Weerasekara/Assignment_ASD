@@ -49,7 +49,7 @@ public class Booking_Controller implements Booking_Interface {
             //update query
             String query = "UPDATE booking SET Booking_id='" + booking.getBooking_id() + "',FromDate='" + booking.getFromDate() + "',ToDate='" + booking.getToDate() + "',StartTime='" + booking.getStartTime() + "'," +
                     "EndTime='" + booking.getEndTime() + "',Occasion='" + booking.getOccasion() + "',Period='" + booking.getPeriod() + "',Client='" + booking.getClient() + "',ContactNo='" + booking.getContactNo() + "'," +
-                    "Notes='" + booking.getNotes() + "',RoomNo='" + booking.getRoomNo() + "' WHERE Booking_id='" + booking.getBooking_id() + "'";
+                    "Notes='" + booking.getNotes() + "' WHERE RoomNo ='" + booking.getRoomNo() + "'   ";
 
             //set query
             Statement statement = con.createStatement();
