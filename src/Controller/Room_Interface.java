@@ -2,6 +2,7 @@ package Controller;
 
 import Model.Room;
 
+import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -20,6 +21,8 @@ public interface Room_Interface {
 
     //view all details
     public ArrayList<Room> list();
+
+    public ArrayList<Room> viewRoom();
 
     //search specific data
     public Room get(String RoomNo);

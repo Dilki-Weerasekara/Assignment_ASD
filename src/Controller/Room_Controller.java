@@ -124,6 +124,41 @@ public class Room_Controller implements Room_Interface {
         return viewList;
     }
 
+    @Override
+    public ArrayList<Room> viewRoom() {
+        //create new Object in ArrayList
+        ArrayList<Room> viewList = new ArrayList<>();
+
+
+        try {
+            //view all details
+            String query = "SELECT RoomNo FROM room";
+
+            //set query
+            PreparedStatement preparedStatement = con.prepareStatement(query);
+
+            //execute query
+            ResultSet resultSet = preparedStatement.executeQuery();
+
+            //create new object
+            Room roomView;
+
+            //retrieve data row by row
+            while (resultSet.next()) {
+                roomView = new Room(resultSet.getString("RoomNo"));
+
+                viewList.add(roomView);
+            }
+
+        } catch (Exception e) {
+
+            e.printStackTrace();
+
+        }
+
+        return viewList;
+    }
+
     //search data using Room No
     @Override
     public Room get(String RoomNo) {

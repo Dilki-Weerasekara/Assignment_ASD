@@ -33,6 +33,10 @@ public class Room {
         EndTime = endTime;
     }
 
+    public Room(String roomNo) {
+        RoomNo = roomNo;
+    }
+
     //set getters and setters
     public String getRoomNo() {
         return RoomNo;
