@@ -1,6 +1,7 @@
 package Controller;
 
 import Model.Booking;
+import Model.Room;
 
 import java.sql.*;
 import java.util.ArrayList;
@@ -117,6 +118,40 @@ public class Booking_Controller implements Booking_Interface {
 
         } catch (Exception e) {
             e.printStackTrace();
+        }
+
+        return viewList;
+    }
+
+    public ArrayList<Room> viewBooking() {
+        //create new Object in ArrayList
+        ArrayList<Room> viewList = new ArrayList<>();
+
+
+        try {
+            //view all details
+            String query = "SELECT RoomNo FROM booking";
+
+            //set query
+            PreparedStatement preparedStatement = con.prepareStatement(query);
+
+            //execute query
+            ResultSet resultSet = preparedStatement.executeQuery();
+
+            //create new object
+            Room roomView;
+
+            //retrieve data row by row
+            while (resultSet.next()) {
+                roomView = new Room(resultSet.getString("RoomNo"));
+
+                viewList.add(roomView);
+            }
+
+        } catch (Exception e) {
+
+            e.printStackTrace();
+
         }
 
         return viewList;

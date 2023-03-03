@@ -37,6 +37,9 @@ public class Booking {
         RoomNo = roomNo;
     }
 
+    public Booking(String roomNo) {
+        RoomNo = roomNo;
+    }
     //add setters and getters
 
     public int getBooking_id() {
