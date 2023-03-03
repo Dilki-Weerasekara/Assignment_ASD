@@ -1,9 +1,15 @@
 package View;
 
+import Controller.Booking_Controller;
+import Controller.Room_Controller;
+import Model.Booking;
+import Model.Room;
+
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.util.ArrayList;
 
 public class UpdateBooking_Manager extends JFrame {
     private JPanel panelMain;
@@ -42,12 +48,31 @@ public class UpdateBooking_Manager extends JFrame {
         setContentPane(panelMain);
         setMinimumSize(new Dimension(700,500));
         setResizable(false);
+        setVisible(true);
         btn_Cancel.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
                 dispose();
             }
         });
+
+
+    }
+
+    public void viewRoomId(){
+        try {
+            Booking_Controller booking_controller = new Booking_Controller();
+            ArrayList<Room> list = booking_controller.viewBooking();
+
+            for (Room room : list){
+                String room_No = room.getRoomNo();
+                comboBox_RoomNo.addItem(room_No);
+            }
+
+        } catch (Exception e) {
+            throw new RuntimeException(e);
+        }
+
     }
 
 
@@ -55,6 +80,6 @@ public class UpdateBooking_Manager extends JFrame {
 
         //create a new object
         UpdateBooking_Manager updateBooking_manager = new UpdateBooking_Manager();
-        updateBooking_manager.setVisible(true);
+        updateBooking_manager.viewRoomId();
     }
 }
