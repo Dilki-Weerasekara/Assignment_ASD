@@ -37,6 +37,16 @@ public class Room {
         RoomNo = roomNo;
     }
 
+    public Room(String roomNo, String type, int size, String status, String reason, String startTime, String endTime) {
+        RoomNo = roomNo;
+        Type = type;
+        Size = size;
+        Status = status;
+        Reason = reason;
+        StartTime = startTime;
+        EndTime = endTime;
+    }
+
     //set getters and setters
     public String getRoomNo() {
         return RoomNo;

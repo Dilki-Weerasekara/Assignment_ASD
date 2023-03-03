@@ -109,8 +109,7 @@ public class Room_Controller implements Room_Interface {
             //retrieve data row by row
             while (resultSet.next()) {
                 roomView = new Room(resultSet.getString("RoomNo"), resultSet.getString("Type"), resultSet.getInt("Size"),
-                        resultSet.getString("Status"), resultSet.getString("Reason"), resultSet.getDate("FromDate"),
-                        resultSet.getDate("ToDate"), resultSet.getString("StartTime"), resultSet.getString("EndTime"));
+                        resultSet.getString("Status"), resultSet.getString("Reason"), resultSet.getString("StartTime"), resultSet.getString("EndTime"));
 
                 viewList.add(roomView);
             }
