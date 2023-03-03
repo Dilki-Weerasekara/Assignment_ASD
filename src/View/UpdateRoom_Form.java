@@ -37,6 +37,9 @@ public class UpdateRoom_Form extends JFrame{
     private JLabel lbl_TimeTo;
     private JTextField txt_timefrom;
     private JTextField txt_timeto;
+    private JComboBox comboBox3;
+    private JPanel panel_datefrom;
+    private JPanel panel_dateto;
 
     //constructor
     public UpdateRoom_Form(){
@@ -53,12 +56,12 @@ public class UpdateRoom_Form extends JFrame{
         //from Date
         JDateChooser fdateChooser = new JDateChooser(calendar.getTime());
         fdateChooser.setDateFormatString("yyyy-MM-dd");
-        txt_datefrom.add(fdateChooser);
+        panel_datefrom.add(fdateChooser);
 
         //To Date
         JDateChooser tdateChooser = new JDateChooser(calendar.getTime());
         tdateChooser.setDateFormatString("yyyy-MM-dd");
-        txt_dateto.add(tdateChooser);
+        panel_dateto.add(tdateChooser);
 
 
         //cancel button
@@ -84,7 +87,7 @@ public class UpdateRoom_Form extends JFrame{
                         try{
                             //get values
                             String roomNo = comboBox2.getSelectedItem().toString();
-                            String roomType = textField1.getText().toString();
+                            String roomType = comboBox3.getSelectedItem().toString();
                             int roomSize = Integer.parseInt(textField2.getText());
                             String currentStatus = comboBox1.getSelectedItem().toString();
                             String reason = txt_Reason.getText().toString();
@@ -109,9 +112,6 @@ public class UpdateRoom_Form extends JFrame{
                             room.setFromDate(fromDate);
                             room.setToDate(toDate);
 
-
-
-                            //Date and Time set
 
                         } catch (Exception e){
                             System.out.println(e.getMessage());

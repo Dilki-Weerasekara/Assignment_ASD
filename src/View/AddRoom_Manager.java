@@ -112,7 +112,7 @@ public class AddRoom_Manager extends JFrame{
 
 
 
-                            //Date and Time set
+
 
                         } catch (Exception e){
                             System.out.println(e.getMessage());
