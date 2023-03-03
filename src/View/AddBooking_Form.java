@@ -1,7 +1,6 @@
 package View;
 
 import Controller.Booking_Controller;
-import Controller.Room_Controller;
 import Model.Booking;
 import Model.Room;
 import com.toedter.calendar.JDateChooser;
@@ -35,7 +34,6 @@ public class AddBooking_Form extends JFrame{
     private JTextField txt_ClientContactNo;
     private JTextArea txt_SpecialNotes;
     private JComboBox comboBox_roomNo;
-    private JLabel lbl_RoomFacilities;
     private JLabel lbl_FromDate;
     private JLabel lbl_ToDate;
     private JLabel lbl_TimeStart;
@@ -43,10 +41,6 @@ public class AddBooking_Form extends JFrame{
     private JTextField txt_stratTime;
     private JTextField txt_endTime;
     private JComboBox comboBox_AMPM;
-    private JLabel lbl_RoomSize;
-    private JLabel lbl_ShowSize;
-    private JLabel lbl_RoomType;
-    private JLabel lbl_ShowType;
     private JPanel fromDate;
     private JPanel toDate;
 
