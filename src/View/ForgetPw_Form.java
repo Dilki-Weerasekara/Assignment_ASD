@@ -1,9 +1,12 @@
 package View;
-
+import Controller.User_Controller;
+import Model.User;
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
 
 public class ForgetPw_Form extends JFrame{
     private JPanel panelMain;
@@ -28,6 +31,51 @@ public class ForgetPw_Form extends JFrame{
             @Override
             public void actionPerformed(ActionEvent e) {
                 dispose();
+            }
+        });
+        btn_Update.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+
+                //create an object from Model Class
+                User user = new User();
+
+                //concurrency
+                ExecutorService executorService = Executors.newSingleThreadExecutor();
+
+                executorService.submit(new Runnable() {
+                    @Override
+                    public void run() {
+
+                       try {
+                           //get values
+                           String email = txt_Email.getText().toString();
+                           String password = txt_NewPw.getText().toString();
+                           String confirm_password = txt_ConfirmPw.getText().toString();
+
+                           //set values
+                           user.setEmail(email);
+                           user.setPassword(password);
+
+                            if(password.equals(confirm_password)){
+                                User_Controller user_controller = new User_Controller();
+                                user_controller.update(user);
+                                dispose();
+
+                            }else{
+                                JOptionPane.showMessageDialog(null, "Password does not match with Confirm Password","Error",JOptionPane.ERROR_MESSAGE);
+                            }
+
+                       }catch(Exception e){
+                           System.out.println(e.getMessage());
+                       }
+
+                    }
+                });
+                executorService.shutdown();
+
+
+
             }
         });
     }
