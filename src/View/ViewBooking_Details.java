@@ -72,7 +72,6 @@ public class ViewBooking_Details extends JFrame{
     public static void main(String[] args) throws Exception{
         //create a new object
         ViewBooking_Details viewBookingDetails = new ViewBooking_Details();
-        viewBookingDetails.setVisible(true);
         viewBookingDetails.ViewTableData();
 
     }
