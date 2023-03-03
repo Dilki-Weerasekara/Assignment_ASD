@@ -36,6 +36,11 @@ public class Booking_Controller implements Booking_Interface {
             //Show message dialog
             JOptionPane.showMessageDialog(null, "Successfully Saved", "information", JOptionPane.INFORMATION_MESSAGE);
 
+            //update room table unavailable when booking confirmation done
+            String query1 = "UPDATE room SET Status = 'Unavailable'  WHERE RoomNo ='" + booking.getRoomNo() + "' ";
+
+            statement.execute(query1);
+
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -81,6 +86,7 @@ public class Booking_Controller implements Booking_Interface {
 
             //Show message dialog
             JOptionPane.showMessageDialog(null, "Successfully Deleted", "information", JOptionPane.INFORMATION_MESSAGE);
+
 
         } catch (Exception e) {
             e.printStackTrace();
